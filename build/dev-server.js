@@ -112,5 +112,5 @@ module.exports = app.listen(8500, function (err) {
     console.log(err)
     return
   }
-  console.log('Listening at http://localhost:8300')
+  console.log('Listening at http://localhost:8500')
 })
