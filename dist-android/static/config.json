@@ -1,0 +1,7 @@
+{
+	"timer":[
+		{"alias":"TelTimeOut","interval":"2","used":"false"},
+		{"alias":"ApplyTimeOut","interval":"2","used":"true","hasParams":"true","paramType":"workflow_names"},
+		{"alias":"SafeCheckTimeOut","interval":"6","used":"false"}
+	]
+}

@@ -1,0 +1,860 @@
+
+
+
+/* 滚动条样式 */
+/*---滚动条默认显示样式--*/
+::-webkit-scrollbar-thumb{
+  //  display: none;
+  /*background-color: rgba(240, 51, 41, 0.2);*/
+  background-color:#9ed8e6;
+  height:10px;
+  //outline-offset:-2px;
+  /*outline:2px solid #fff;*/
+  -webkit-border-radius:5px;
+  box-shadow: none;
+  /*border: 2px solid #fff;*/
+}
+
+/*---鼠标点击滚动条显示样式--*/
+::-webkit-scrollbar-thumb:hover{
+  //  display: inherit;
+  background-color:#80d2e6;
+  height:10px;
+  -webkit-border-radius:5px;
+  box-shadow: none;
+}
+/*---滚动条大小--*/
+::-webkit-scrollbar{
+  width:8px;
+  height:8px;
+}
+/*---滚动框背景样式--*/
+.left-tree::-webkit-scrollbar-track-piece{
+  /* 全透明，不显示 */
+  background-color:#4a7cae;
+  -webkit-border-radius:0;
+}
+.system-left-tree::-webkit-scrollbar-track-piece{
+  /* 全透明，不显示 */
+  background-color:#4a7cae!important;
+  -webkit-border-radius:0;
+}
+.system-left-tree::-webkit-scrollbar{
+  /* 全透明，不显示 */
+  background-color:#4a7cae;
+}
+
+.left-tree::-webkit-scrollbar{
+  /* 全透明，不显示 */
+  background-color:#4a7cae;
+}
+.system-left-tree::-webkit-scrollbar-button{
+  /* 全透明，不显示 */
+  background-color:#4a7cae;
+}
+
+.left-tree::-webkit-scrollbar-button{
+  /* 全透明，不显示 */
+  background-color:#4a7cae;
+}
+::-webkit-scrollbar{
+  background-color:#ffffff!important;
+}
+
+::-webkit-scrollbar-track-piece{
+  /* 全透明，不显示 */
+  background-color:#ffffff;
+  -webkit-border-radius:0;
+}
+
+
+//左侧树字体及位置
+.left-tree{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.left-tree  .list-group-item{
+
+  font-size: 1.3rem;
+  background-color:#7ea8d2;
+  border: none;
+}
+
+
+.list-group-item:hover {
+  border-left: 2px solid  #5ac0d9!important;
+  background-color: #ffffff!important;
+  color: #5ac0d9!important;
+}
+.left-active {
+  border-left: 2px solid  #5ac0d9!important;
+  background-color: #ffffff!important;
+  color: #5ac0d9!important;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  //width: 100%!important;
+  //height: 100%!important;
+  text-overflow: ellipsis;
+}
+.left-father {
+  background-color: #4a7cae!important;
+  color: #ffffff!important;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  //width: 100%!important;
+  //height: 100%!important;
+  text-overflow: ellipsis;
+}
+
+
+.system-left-icon {
+  width: 100%;
+  /*transition: 0.5s;*/
+  > .span {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+
+
+.left-tree .dropdown-menu-1 {
+  /* 控制显示列表的样式 */
+  background: #4C637B!important;
+  border-radius: 0px;
+  color: #fff!important;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+
+}
+.left-tree .dropdown-menu-up {
+  /* bottom，top控制上下，left和right控制左右*/
+  left: 100%!important;
+  top: auto!important;
+  bottom: 0;
+}
+.left-tree .dropdown-menu-down {
+  /* bottom，top控制上下，left和right控制左右*/
+  left: 100%!important;
+  top: 0!important;
+
+}
+.left-tree .dropdown-menu>li{
+  text-align: center;
+  line-height: 50px;
+  border-bottom: 1px solid #697D93!important;
+  font-size: 1.2em;
+  width: auto;
+  white-space: nowrap;
+  cursor: default;
+   background-color: black!important;
+
+}
+.left-tree .dropdown-menu li + li {
+  text-align: left;
+  border: 0;
+  line-height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: black!important;
+
+}
+.left-tree .dropdown-menu li + li:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+.left-tree .dropdown-menu li a {
+  border: none;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1em;
+  padding: 0px;
+  background-color: black!important;
+
+}
+.left-tree .dropdown-menu li a:hover {
+  color: #fff;
+  background-color: rgba(255,255,255,0);
+}
+
+//=========================公用
+.system-logo-chi-img1{
+  margin: 1% 1%;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  background-image: url("../../../../../static/newStyle/login-org.png");
+  background-size: 100%;
+  background-repeat:no-repeat;
+}
+
+
+.dropstyle{
+  background-color: #4a7cae;
+  font-size: 1.4rem;
+}
+.dropstyle-1{
+  font-size: 1.4rem;
+  background-color: #5e8ebe;
+}
+
+.dropstyle-chi{
+  padding: 10%;
+  margin-top: 16%;
+  //width: 120%;
+  background-color: #3d77b1;
+  box-shadow: 0px 0px 8px 1px
+  rgba(74, 124, 174, 0.3);
+}
+
+.dropstyle-chi li{
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: PINGFANG-MEDIUM;
+  white-space: nowrap;
+  padding: 5px 10px;
+}
+
+
+/*分辨率@1920*1080*/
+@media screen and (min-width:1920px) {
+  .system-main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .system-logo img{
+    margin-bottom: 10px;
+    width: 50px;
+  }
+
+  .system-logo label{
+    padding: 0.7% 4px;
+    font-family: TRENDS;
+    font-size: 2.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+  }
+
+  .system-logo-chi{
+    padding: 0.7%;
+    width: 40%;
+    float: right;
+    color: white;
+    font-family:PINGFANG-BOLD;
+    font-size: 1.6rem;
+  }
+  .system-logo-chi img{
+    margin-bottom: 0px;
+    width: 20px;
+  }
+
+  .system-logo-chi-span-1{
+    font-size: 1.4rem;
+  }
+  .system-logo-chi span{
+    padding-left: 10px;
+  }
+  .system-logo-chi a{
+    margin: 0 5%;
+    color: white;
+  }
+  .system-logo-prompt{
+    position: absolute;
+    top: 4%;
+    color: #333333;
+  }
+  .system-left{
+    float: left;
+    width: 10%;
+    height: 95%;
+  }
+  .system-left-chi{
+    height: 97%;
+    color: #fff;
+  }
+  .system-left-1{
+    width: 8%;
+  }
+  .system-right-1{
+    z-index: -1;
+    width: 92%;
+  }
+
+  .system-left-tree {
+    margin-bottom:10px;
+    padding-bottom:1px;
+    padding-top:1px;
+    flex: 1;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .system-right{
+    float: left;
+    width: 90%;
+    height: 93%;
+    background-color: #e8f4ff;
+    color: #333333;
+  }
+
+  .system-foot{
+    display: flex;
+    width: 100%;
+    height: 3%;
+    background: #fff;
+  }
+
+  .system-foot-stretch{
+    height: 3%;
+    width: 100%;
+    background-color: #4a7cae;
+    text-align: center;
+    padding: 4%;
+  }
+  .system-foot-box{
+    height: 100%;
+    width: auto;
+    background-color: #ffffff;
+  }
+
+  .tabs-style{
+    background-color: #ffffff;
+  }
+  .tabs-style-li{
+    //border-bottom: none;
+    //border-top:1px solid #5ac0d9;
+    color: #999999;
+    font-size: 1.4rem;
+  }
+
+  .tabs-style-li  a{
+    margin: 0 6px;
+    &,
+    &:hover,
+    &:focus {
+      border-bottom: none;
+      border-top: 2px solid #5ac0d9;
+      color: #5ac0d9;
+      background-color: #e7f3fe;
+    }
+  }
+}
+
+/*分辨率@1920*1080*/
+@media screen and (max-width: 1920px) {
+  .system-main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .system-logo{
+    width: 100%;
+    height: 5%;
+    background-color: #4a7cae;
+    padding: 0 1% 0 2%;
+  }
+  .system-logo img{
+    margin-bottom: 10px;
+    width: 50px;
+  }
+
+  .system-logo label{
+    padding: 0.7% 4px;
+    font-family: TRENDS;
+    font-size: 2.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+  }
+
+  .system-logo-chi{
+    padding: 0.7%;
+    width: 40%;
+    float: right;
+    color: white;
+    font-family:PINGFANG-BOLD;
+    font-size: 1.6rem;
+  }
+  .system-logo-chi img{
+    margin-bottom: 0px;
+    width: 20px;
+  }
+
+  .system-logo-chi-span-1{
+    font-size: 1.4rem;
+  }
+  .system-logo-chi span{
+    padding-left: 10px;
+  }
+  .system-logo-chi a{
+    margin: 0 5%;
+    color: white;
+  }
+  .system-logo-prompt{
+    position: absolute;
+    top: 4%;
+    color: #333333;
+  }
+  .system-left{
+    float: left;
+    width: 10%;
+    height: 95%;
+  }
+  .system-left-chi{
+    height: 96%;
+    color: #fff;
+  }
+
+  .system-left-1{
+    width: 8%;
+  }
+  .system-right-1{
+    z-index: -1;
+    width: 92%;
+  }
+
+  .system-left-tree {
+    margin-bottom:10px;
+    padding-bottom:1px;
+    padding-top:1px;
+    flex: 1;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .system-right{
+    float: left;
+    width: 90%;
+    height: 95%;
+    background-color: #e8f4ff;
+    color: #333333;
+  }
+
+  .system-foot{
+    display: flex;
+    width: 100%;
+    height: 4%;
+    background: #fff;
+  }
+
+  .system-foot-stretch{
+    height: 4%;
+    width: 100%;
+    background-color: #4a7cae;
+    text-align: center;
+    padding: 4%;
+  }
+  .system-foot-box{
+    height: 100%;
+    width: auto;
+    background-color: #ffffff;
+  }
+
+
+
+
+  .tabs-style{
+    background-color: #ffffff;
+  }
+  .tabs-style-li{
+    //border-bottom: none;
+    //border-top:1px solid #5ac0d9;
+    color: #999999;
+    font-size: 1.4rem;
+  }
+
+  .tabs-style-li  a{
+    margin: 0 6px;
+    &,
+    &:hover,
+    &:focus {
+      border-bottom: none;
+      border-top: 2px solid #5ac0d9;
+      color: #5ac0d9;
+      background-color: #e7f3fe;
+    }
+  }
+
+}
+
+/*分辨率@1366*768*/
+@media screen and (max-width: 1366px) {
+
+  .system-main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .system-logo{
+    width: 100%;
+    height: 7%;
+    background-color: #4a7cae;
+    padding: 0 1% 0 4%;
+  }
+  .system-logo label{
+    font-family: TRENDS;
+    font-size: 2.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+  }
+
+  .system-logo-chi{
+    width: 40%;
+    float: right;
+    color: white;
+    font-family:PINGFANG-BOLD;
+    font-size: 1.4rem;
+  }
+
+  .system-logo-prompt{
+    position: absolute;
+    top: 4%;
+    color: #333333;
+  }
+  .system-left{
+    float: left;
+    width: 12%;
+    height: 93%;
+  }
+  .system-left-1{
+    width: 8%;
+  }
+  .system-right-1{
+    z-index: -1;
+    width: 92%;
+  }
+  .system-left-chi{
+    height: 94%;
+    color: #fff;
+  }
+
+
+  .system-left-tree {
+    margin-bottom:10px;
+    padding-bottom:1px;
+    padding-top:1px;
+    flex: 1;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .system-right{
+    float: left;
+    width: 88%;
+    height: 93%;
+    background-color: #e8f4ff;
+    color: #333333;
+  }
+
+  .system-foot{
+    display: flex;
+    width: 100%;
+    height: 6%;
+    background: #fff;
+  }
+
+  .system-foot-stretch{
+    height: 6%;
+    width: 100%;
+    background-color: #4a7cae;
+    text-align: center;
+    padding: 4%;
+  }
+  //.system-foot-stretch-1{
+  //  width: 6%;
+  //}
+  .system-foot-box{
+    height: 100%;
+    width: auto;
+    background-color: #ffffff;
+  }
+
+  .tree-flex-footer{
+    width: 100%!important;
+    height: 42px!important;
+    background-color: #4a7cae!important;
+    color: white;
+  }
+
+  .tree-flex-footer button{
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    width: 100%!important;
+    height: 100%!important;
+    text-overflow:ellipsis;
+    color: white;
+  }
+
+  .tabs-style{
+    background-color: #ffffff;
+  }
+  .tabs-style-li{
+    //border-bottom: none;
+    //border-top:1px solid #5ac0d9;
+    color: #999999;
+    font-size: 1.4rem;
+  }
+
+  .tabs-style-li  a{
+    margin: 0 6px;
+    &:hover,
+    &:focus {
+      border-bottom: none;
+      border-top: 2px solid #5ac0d9;
+      color: #5ac0d9;
+      background-color: #e7f3fe;
+    }
+  }
+}
+
+
+
+/*分辨率@1280*720*/
+@media screen and (max-width: 1280px) {
+  .system-main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .system-logo{
+    width: 100%;
+    height: 7%;
+    background-color: #4a7cae;
+    padding: 0 1% 0 4%;
+  }
+  .system-logo label{
+    font-family: TRENDS;
+    font-size: 2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+  }
+
+  .system-logo-chi{
+    width: 40%;
+    float: right;
+    color: white;
+    font-family:PINGFANG-BOLD;
+    font-size: 1.2rem;
+  }
+
+  .system-logo-prompt{
+    position: absolute;
+    top: 4%;
+    color: #333333;
+  }
+  .system-left{
+    float: left;
+    width: 12%;
+    height: 93%;
+  }
+  .system-left-1{
+    width: 6%;
+  }
+  .system-left-chi{
+    height: 94%;
+    color: #fff;
+  }
+
+
+  .system-left-tree {
+    font-size: 1.2rem;
+    margin-bottom:10px;
+    padding-bottom:1px;
+    padding-top:1px;
+    flex: 1;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .system-right{
+    float: left;
+    width: 88%;
+    height: 93%;
+    background-color: #e8f4ff;
+    color: #333333;
+  }
+  .system-right-1{
+    width: 94%;
+  }
+  .system-foot{
+    display: flex;
+    width: 100%;
+    height: 6%;
+    background: #fff;
+  }
+
+  .system-foot-stretch{
+    height: 6%;
+    width: 100%;
+    background-color: #4a7cae;
+    text-align: center;
+    padding: 4%;
+  }
+  //.system-foot-stretch-1{
+  //  width: 6%;
+  //}
+  .system-foot-box{
+    height: 100%;
+    width: auto;
+    background-color: #ffffff;
+  }
+
+
+
+  .tabs-style{
+    background-color: #ffffff;
+  }
+  .tabs-style-li{
+    //border-bottom: none;
+    //border-top:1px solid #5ac0d9;
+    color: #999999;
+    font-size: 1.4rem;
+  }
+
+  .tabs-style-li  a{
+    margin: 0 6px;
+    &,
+    &:hover,
+    &:focus {
+      border-bottom: none;
+      border-top: 2px solid #5ac0d9;
+      color: #5ac0d9;
+      background-color: #e7f3fe;
+    }
+  }
+}
+
+
+/*分辨率@800*600*/
+@media screen and (max-width: 800px) {
+  .system-main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .system-logo{
+    width: 100%;
+    height: 7%;
+    background-color: #4a7cae;
+    padding: 0 1% 0 4%;
+  }
+  .system-logo label{
+    font-family: TRENDS;
+    font-size: 2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+  }
+
+  .system-logo-chi{
+    width: 40%;
+    float: right;
+    color: white;
+    font-family:PINGFANG-BOLD;
+    font-size: 1.2rem;
+  }
+
+  .system-logo-prompt{
+    position: absolute;
+    top: 4%;
+    color: #333333;
+  }
+  .system-left{
+    float: left;
+    width: 15%;
+    height: 93%;
+  }
+  .system-left-1{
+    width: 6%;
+  }
+  .system-left-chi{
+    height: 94%;
+    color: #fff;
+  }
+
+
+  .system-left-tree {
+    margin-bottom:10px;
+    padding-bottom:1px;
+    padding-top:1px;
+    flex: 1;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .system-right{
+    float: left;
+    width: 85%;
+    height: 93%;
+    background-color: #e8f4ff;
+    color: #333333;
+  }
+  .system-right-1{
+    width: 94%;
+  }
+  .system-foot{
+    display: flex;
+    width: 100%;
+    height: 6%;
+    background: #fff;
+  }
+
+  .system-foot-stretch{
+    height: 6%;
+    width: 100%;
+    background-color: #4a7cae;
+    text-align: center;
+    padding: 4%;
+  }
+  //.system-foot-stretch-1{
+  //  width: 6%;
+  //}
+  .system-foot-box{
+    height: 100%;
+    width: auto;
+    background-color: #ffffff;
+  }
+
+
+  .tabs-style{
+    background-color: #ffffff;
+  }
+  .tabs-style-li{
+    //border-bottom: none;
+    //border-top:1px solid #5ac0d9;
+    color: #999999;
+    font-size: 1.4rem;
+  }
+
+  .tabs-style-li  a{
+    margin: 0 6px;
+    &,
+    &:hover,
+    &:focus {
+
+      color: #5ac0d9;
+      border-top: 2px solid #5ac0d9;
+      background-color: #e7f3fe;
+    }
+  }
+}

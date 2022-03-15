@@ -1,0 +1,571 @@
+@import "./bootstrap/less/variables.less";
+
+@form-text-fout-size: @font-size-base;//引用bootstrap的字体大小
+@form-text-padding: 10px;//右padding
+/**
+文本表单flex布局实现固定label
+ */
+.form-fix-width{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:flex;
+}
+.form-fix-width>:first-child{
+  width: @form-text-padding+@form-text-fout-size*5;
+  -webkit-box-flex:none;
+  -webkit-flex:none;
+  -ms-flexbox-flex:none;
+  flex:none;
+}
+.form-fix-width>:last-child{
+  flex:1;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  -ms-flexbox-flex:1;
+}
+/**
+固定checkbox的一些属性 后续继续扩增
+ */
+.checkbox-fix-width {
+  width: @form-text-fout-size*4+@form-text-padding+20px;
+  text-align: left;
+  margin-left: 0px !important;
+}
+
+#android-app {
+  font-size: 16px;
+}
+
+/* 解决chrome最小字体为12px问题 */
+.chrome_adjust {
+  font-size: 10px;
+  -webkit-transform: scale(0.85);
+  -o-transform: scale(1);    //针对能识别-webkit的opera browser设置
+}
+
+/* 表单内输入框 */
+.form-input-group-large {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  .control-label {
+    width: 100px;
+    line-height: @input-height-base;
+    text-align: right;
+    + * {
+      -webkit-box-flex:1;
+      -webkit-flex:1;
+      -ms-flexbox-flex:1;
+      flex: 1;
+      width: 100px; // 随意给的宽度，将有flex重新计算
+      box-sizing: border-box;
+      vertical-align:middle;
+    }
+  }
+}
+.form-input-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  .control-label {
+    // 居中对齐
+    line-height: @input-height-base;
+    width: 70px;
+    // padding-top: 6px;
+    text-align: right;
+    vertical-align: middle;
+    + * {
+      -webkit-box-flex:1;
+      -webkit-flex:1;
+      -ms-flexbox-flex:1;
+      flex: 1;
+      width: 100px; // 随意给的宽度，将有flex重新计算
+      box-sizing: border-box;
+      vertical-align:middle;
+    }
+  }
+}
+.form-input-group-small {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  label {
+    width: 50px;
+    line-height: @input-height-base;
+    text-align: right;
+    + * {
+      -webkit-box-flex:1;
+      -webkit-flex:1;
+      -ms-flexbox-flex:1;
+      flex: 1;
+      width: 100px; // 随意给的宽度，将有flex重新计算
+      box-sizing: border-box;
+      vertical-align:middle;
+    }
+  }
+}
+.bg-white {
+  background-color: white;
+}
+.mgb-5 {
+  margin-bottom: 5px;
+}
+.pdl-12 {
+  padding-left: 12px;
+}
+// 字体加粗
+.fwb {
+  font-weight: bold;
+}
+// 浮动右对齐
+.fr {
+  float: right;
+}
+.pl-12 {
+  padding-left: 12px;
+}
+.p-10 {
+  padding: 10px;
+}
+.pt-8 {
+  padding-top: 8px;
+}
+// 下拉选择框占据剩余全部空间
+.select-overspread {
+  .form-group {
+    // margin: 0px 5px 10px 0px;
+    .form-control {
+      margin-right: 0px;
+    }
+  }
+  .btn-group, .btn-group-vertical {
+    // width: 100%;
+    // padding-right: 5px;
+    button {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .dropdown-menu {
+    min-width: 100%
+  }
+}
+.app-bg {
+  background: #F5F5F5;
+}
+.app-input {
+  background: #FFF;
+  border-bottom: 1px solid #ccc;
+}
+.app-input input, .app-input label {
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  margin: 0px;
+}
+.app-textarea {
+  display: block;
+  padding: 10px 15px;
+  border: 0;
+  resize: none;
+  width: 100%;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  outline: 0;
+}
+.app-cells {
+  height: auto;
+  background-color: #FFFFFF;
+  font-size: 1.2em;
+  overflow: hidden;
+  position: relative;
+}
+.app-cells label {
+  padding: 10px;
+  margin: 0px;
+  color: #999999;
+  font-weight: normal;
+}
+.app-cells * + * {
+  border-top: 1px solid #D5D5D6;
+}
+.app-btn {
+  display: flex;
+  width: 100%;
+}
+.app-btn button{
+  flex: 1;
+  border-radius: 17px;
+  margin: 10px;
+}
+.app-btn button:focus, .app-btn button::selection {
+  outline: none;
+}
+.app-list {
+  margin-top: 8px;
+  background: #FFF;
+}
+.app-list div {
+  padding: 6px 10px;
+}
+.app-list div:first-child{
+  border-bottom: 1px solid #ccc;
+}
+.app-input .datepicker-input[readonly] {
+  border: none;
+  background: none;
+}
+div[contenteditable=true]{
+  height: 80px;
+  width: 100%;
+  outline: none;
+  padding: 8px;
+  overflow: scroll;
+}
+//.bg:hover{
+//   background-color: @table-bg-hover;
+// }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-between span {
+  padding-right: 10px;
+}
+.flex-full {
+  flex: 1;
+}
+/* app卡片样式 */
+.app-preview {
+  position: relative;
+  background-color: #FFF;
+  height: auto;
+}
+.app-preview > .head > * {
+  padding: 0px;
+  margin: 0px;
+}
+.app-preview > .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  line-height: 2.5em;
+  border-bottom: 1px solid #D5D5D6;
+}
+.app-preview-btn-default {
+  color: #999999;
+}
+.app-preview-btn-success {
+  color: #3CC51F;
+}
+.app-preview > .body {
+  padding: 10px 15px;
+  border-bottom: 1px solid #D5D5D6;
+
+}
+.app-preview > .body > div > label {
+  text-align: justify;
+  text-align-last: justify;
+  min-width: 70px;
+}
+.app-preview > .foot {
+  display: flex;
+  height: 50px;
+}
+.app-preview > .foot > * {
+  flex: 1;
+  display: block;
+  flex: 1;
+
+  text-align: center;
+}
+.app-preview > .foot > * + * {
+  border-left: 1px solid #D5D5D6;
+}
+// 为工单列表样式
+.compatible {
+  padding: 8px;
+}
+.compatible .form-input-group {
+  margin: 3px 0px;
+  padding: 0 8px;
+}
+@media screen and (min-width:992px) {
+  .hd-disappear{
+    display: none;
+  }
+}
+
+#work-history ul {
+  padding: 0px;
+}
+
+// 从order文件夹拷贝
+// 为blockquote写的通用样式
+// 大背景
+.repair-bg {
+  background: #DBDBDB;
+}
+// 头部信息提示
+.bq-parent {
+  height: auto;
+  background: #FFF;
+  padding: 10px 15px;
+  >blockquote {
+    padding: 0px;
+    padding-left: 8px;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    border-left-color: #4C647A;
+  }
+}
+// 为移动端提供左侧修饰性边框
+.lb-left {
+  padding-left: 8px;
+  border: none;
+  border-left: 5px solid #A2C2EB;
+}
+// 内容块
+.repair-info-content {
+  margin: 15px;
+  background: #FFF;
+  border-radius: 5px;
+}
+@media screen and (max-width:768px) {
+  .repair-info-content {
+    margin: 0px;
+    padding: 8px;
+    background: #FFF;
+    border-radius: 0px;
+  }
+}
+// 为a标签：berfor伪元素写的通用样式
+.tab-befor-img (@url) {
+  content: '';
+  background-image: url("@{url}");
+  background-size: 30px;
+  display: inline-block;
+  margin-right: 8px;
+  height: 30px;
+  width: 30px;
+  vertical-align: -35%;
+}
+.android-repair-order {
+  > div {
+    > ul {
+      background: #4C647A;
+      overflow: auto;
+      li {
+        display: block;
+        width: 100%;
+      }
+      > .active {
+        a {
+          background: #7599C4!important;
+          color: #FFF!important;
+          border: none;
+          display: block;
+          font-weight: bold;
+          &::after {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border-width: 8px 8px 8px 0px;
+            border-color: transparent #FFF;
+            border-style: solid;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:focus {
+            color: #FFF;
+            background: none;
+          }
+        }
+      }
+      a {
+        font-size: 18px;
+        color: #FFF;
+        padding: 13px 16px;
+      }
+    }
+  }
+}
+
+// 从app中考出
+.no-close .nav-tabs a {
+  padding: 5px 12px;
+}
+/* checkbox和radio的样式 */
+.magic-radio,
+.magic-checkbox {
+  position: absolute;
+  display: none;
+}
+
+.magic-radio[disabled],
+.magic-checkbox[disabled] {
+  cursor: not-allowed;
+}
+
+.magic-radio + label,
+.magic-checkbox + label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.magic-radio + label:hover:before,
+.magic-checkbox + label:hover:before {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: hover-color;
+}
+
+.magic-radio + label:before,
+.magic-checkbox + label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: '';
+  border: 1px solid #c0c0c0;
+}
+
+.magic-radio + label:after,
+.magic-checkbox + label:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+.magic-radio[disabled] + label,
+.magic-checkbox[disabled] + label {
+  cursor: not-allowed;
+  color: #e4e4e4;
+}
+
+.magic-radio[disabled] + label:hover, .magic-radio[disabled] + label:before, .magic-radio[disabled] + label:after,
+.magic-checkbox[disabled] + label:hover,
+.magic-checkbox[disabled] + label:before,
+.magic-checkbox[disabled] + label:after {
+  cursor: not-allowed;
+}
+
+.magic-radio[disabled] + label:hover:before,
+.magic-checkbox[disabled] + label:hover:before {
+  border: 1px solid #e4e4e4;
+  animation-name: none;
+}
+
+.magic-radio[disabled] + label:before,
+.magic-checkbox[disabled] + label:before {
+  border-color: #e4e4e4;
+}
+
+.magic-radio:checked + label:before,
+.magic-checkbox:checked + label:before {
+  animation-name: none;
+}
+
+.magic-radio:checked + label:after,
+.magic-checkbox:checked + label:after {
+  display: block;
+}
+
+.magic-radio + label:before {
+  border-radius: 50%;
+}
+
+.magic-radio + label:after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #7697c4;
+}
+
+.magic-radio:checked + label:before {
+  border: 2px solid #7697c4;
+}
+
+.magic-radio:checked[disabled] + label:before {
+  border: 2px solid #c9e2f9;
+}
+
+/*.magic-radio:checked[disabled] + label:after {
+background: #c9e2f9; }*/
+
+.magic-checkbox + label:before {
+  border-radius: 3px;
+}
+
+.magic-checkbox + label:after {
+  top: 2px;
+  left: 7px;
+  box-sizing: border-box;
+  width: 6px;
+  height: 12px;
+  transform: rotate(45deg);
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  border-top: 0;
+  border-left: 0;
+}
+
+.magic-checkbox:checked + label:before {
+  border: #7697c4;
+  background: #7697c4;
+}
+
+.magic-checkbox:checked[disabled] + label:before {
+  border: #c9e2f9;
+  background: #c9e2f9;
+}
+/* 滚动条样式 */
+/*---滚动条默认显示样式--*/
+::-webkit-scrollbar-thumb{
+  //  display: none;
+  background-color:rgba(0,0,0,0.2);
+  height:50px;
+  outline-offset:-2px;
+  /*outline:2px solid #fff;*/
+  -webkit-border-radius:4px;
+  /*border: 2px solid #fff;*/
+}
+
+/*---鼠标点击滚动条显示样式--*/
+::-webkit-scrollbar-thumb:hover{
+  //  display: inherit;
+  background-color:rgba(0,0,0,0.4);
+  height:50px;
+  -webkit-border-radius:4px;
+}
+/*---滚动条大小--*/
+::-webkit-scrollbar{
+  width:8px;
+  height:8px;
+}
+/*---滚动框背景样式--*/
+::-webkit-scrollbar-track-piece{
+  /* 全透明，不显示 */
+  background-color:rgba(255,255,255,0);
+  -webkit-border-radius:0;
+}

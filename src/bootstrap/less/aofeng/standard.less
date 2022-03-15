@@ -1,0 +1,2121 @@
+
+/*=========================通用样式表=========================*/
+
+
+.fonttitle (@i,@type,@colortype) when (@i > 10) {
+  .font_@{type}_@{colortype}_@{i} when (@colortype="title"){
+    font-weight: @type;
+    color: #333333;
+    text-align: right;
+    vertical-align: middle;
+    font-size: @i px;
+  }
+  .font_@{type}_@{colortype}_@{i} when (@colortype="body"){
+    font-weight: @type;
+    color: #666666;
+    text-align: right;
+    vertical-align: middle;
+    font-size: @i px;
+  }
+  .font_@{type}_@{colortype}_@{i} when (@colortype="title1"){
+    font-weight: @type;
+    color: #999999;
+    text-align: right;
+    vertical-align: middle;
+    font-size: @i px;
+  }
+  .font_@{type}_@{colortype}_@{i} when (@colortype="button"){
+    font-weight: @type;
+    color: #ffffff;
+    text-align: right;
+    vertical-align: middle;
+    font-size: @i px;
+  }
+  .font_@{type}_@{colortype}_@{i} when (@colortype="blue"){
+    font-weight: @type;
+    color: #6aa6e2;
+    text-align: right;
+    vertical-align: middle;
+    font-size: @i px;
+  }
+  .fonttitle(@i - 1,@type,@colortype);
+}
+
+.fonttitle(40,'bold','title');
+.fonttitle(40,'bold','body');
+.fonttitle(40,'bold','title1');
+.fonttitle(40,'bold','button');
+.fonttitle(40,bold,blue);
+.fonttitle(40,normal,title);
+.fonttitle(40,normal,body);
+.fonttitle(40,normal,title1);
+.fonttitle(40,normal,button);
+.fonttitle(40,normal,blue);
+
+
+/********************字体*****************/
+/*字体标题_粗体*/
+.font_bold_title{font-family: PingFang; font-weight: bold;color: #333333;text-align: right;vertical-align: middle; }
+/*字体正文_粗体*/
+.font_bold_body{ font-family: PingFang; font-weight: bold;color: #666666;text-align: right;vertical-align: middle; }
+/*字体_粗体*/
+.font_bold_title1{ font-family: PingFang; font-weight: bold;color: #999999;text-align: right;vertical-align: middle;}
+/*字体按钮_粗体*/
+.font_bold_button{ font-family: PingFang; font-weight: bold;color: #ffffff;text-align: right;vertical-align: middle;}
+/*字体蓝色_粗体*/
+.font_bold_blue{ font-family: PingFang; font-weight: bold;color: #6aa6e2;text-align: right;vertical-align: middle;}
+
+/*字体标题_正常*/
+.font_normal_title{ font-family: PingFang; font-weight: normal;color: #333333;text-align: right;vertical-align: middle;}
+/*字体正文_正常*/
+.font_normal_body{  font-family: PingFang; font-weight: normal !important;color: #666666;text-align: right;vertical-align: middle;}
+/*字体_正常*/
+.font_normal_title1{ font-family: PingFang;font-weight: normal;color: #999999;text-align: right;vertical-align: middle;}
+/*字体按钮_正常*/
+.font_normal_button{ font-family: PingFang;font-weight: normal;color: #ffffff;text-align: right;vertical-align: middle;}
+/*字体蓝色_正常*/
+.font_normal_blue{ font-family: PingFang;font-weight: normal;color: #6aa6e2;text-align: right;vertical-align: middle;}
+/*字体蓝色_正常*/
+.font_normal_blue-1{ padding: 0 2%; border-bottom:1px solid #5ac0d9;  font-family: PingFang;font-weight: normal;color: #5ac0d9;text-align: right;vertical-align: middle;}
+
+.search_area{background-color: #ffffff; padding: 10px 10px 0 10px}
+.list_area{ background-color: #ffffff;padding: 0 0 10px 0}
+
+
+/********************表格*****************/
+/*表格表头*/
+.table_sy thead tr th{ font-size:1.4rem; background-color: #dfedfb!important;color: #666666 !important;font-family: PINGFANG-BOLD !important;font-weight: normal!important;}
+/*表格主体_奇数行*/
+.table_sy tbody tr:nth-child(odd){ text-align: center; background-color: #ffffff !important;border: solid 1px #f0f4fa !important;color: #666666!important;font-size: 1.3rem!important;font-family: PINGFANG-MEDIUM!important;}
+/*表格主体_偶数行*/
+.table_sy tbody tr:nth-child(even){  text-align: center; background-color: #ecf6ff !important;border: solid 1px #f0f4fa !important;color: #666666!important;font-size: 1.3rem!important;font-family: PINGFANG-MEDIUM!important;}
+/*表格主体_移动行*/
+.table_sy tbody tr:hover{  text-align: center;	background-color: #cbeaf1!important;border: solid 1px #f0f4fa !important;color: #666666!important;font-size: 1.3rem!important;font-family: PINGFANG-MEDIUM!important;}
+/*表格底部*/
+.pager{background-color: #eaf5ff !important;font-size:1.4rem;color: #666666 !important;font-family: PINGFANG-MEDIUM !important;font-weight: normal!important;}
+/*表格主体_点击行*/
+.success td{background-color: #cbeaf1 !important;}
+
+.foot{font-family: PingFang !important; overflow-y: hidden}
+
+/*下拉列表滑动变色*/
+.select_list li a:hover{background-color: #eaf5ff !important;border-radius: 2px;border: solid 1px #eaeaea;}
+.select_list button .caret{
+  border: none;
+  background-image: url("../../../../static/newStyle/login-org.png");
+  color: #999999;
+  margin: 5%;
+  float: right;
+}
+
+/*弹窗*/
+.pop_windows{background-color: #d9e9f8;border-radius: 16px 16px 0px 0px;}
+/*标签*/
+.tab_color{border-bottom: 1px solid #6aa6e2; color: #6aa6e2; font-family: PingFang;}
+
+/*按钮间隔*/
+.button_spacing{margin: 0px  0px 0px 9px;}
+
+
+//报表样式
+//报表头部
+.report-head{ background-color: #b3dff7;border: solid 1px #999999;}
+//头部字体
+.head-font{color: #333333;font-size: 18px; }
+//报表左侧
+.report-left{background-color: #dff0f9;border: solid 1px #999999;}
+//报表主体
+.report-main {background-color: #ffffff; border: solid 1px #999999;}
+//报表主体字体
+.main-font{font-size: 18px;color: #1b1b1b; }
+
+.stretch{
+  line-height: 40px;
+  background-color: white;
+  border: none;
+  font-size: 1.4rem;
+  font-family: PINGFANG-BOLD;
+  color: #6aa6e2;
+}
+
+.stretch:hover{
+  border: none;
+}
+
+.stretch:active{
+  border: none;
+}
+
+.span{
+  overflow-y: hidden;
+}
+
+//字体变色
+.has-error >.font_normal_body{
+  color: #a94442!important;
+}
+
+.button_search[disabled]{
+  background-color: #b5cadf;
+  &:hover{
+    background-color: #b5cadf;
+  }
+}
+.button-range{
+  display: flex;
+  float: right;
+  width: auto;
+  align-items: center;
+}
+
+
+/*分辨率@1920*1080*/
+@media screen and (min-width: 1920px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  /********************按钮*****************/
+  .select-style {
+    font-size: 1.4rem;
+  }
+
+
+  .btn-group {
+    display: inline-flex !important;
+    height: 35px;
+  }
+
+  .font_normal_body {
+    float: left;
+    margin-top: 10px;
+    font-size: 1.4rem !important;
+    line-height: 30px;
+  }
+
+  .font_bold_body {
+    font-size: 1.4rem !important;
+    line-height: 30px;
+  }
+
+  .font_bold_title {
+    font-size: 1.4rem !important;
+    line-height: 30px;
+  }
+
+  .table_sy thead tr th {
+    font-size: 1.4rem !important;
+  }
+
+  .foot .pager {
+    font-size: 1.4rem !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager a {
+    font-size: 1.4rem !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager li {
+    font-size: 1.4rem !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+
+  /*按钮查询*/
+  .button_search {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search:hover {
+    background-color: #3592ef;
+  }
+
+  /*删除按钮*/
+  .button_delete {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #f1684d;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_delete:hover {
+    background-color: red;
+  }
+
+  /*按钮清空*/
+  .button_clear {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #5ac0d9;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_clear:hover {
+    background-color: #27c4eb;
+  }
+
+  .button_search-1 {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search-1:hover {
+    background-color: #3592ef;
+  }
+
+  .button_new-1 {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new-1:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮新建*/
+  .button_new {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮导出*/
+  .button_export {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_export:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_export button {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_export button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //查询条件伸展
+  .button_stretch {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_stretch button {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch button:hover {
+    background-color: #f0f8ff;
+  }
+
+
+  //左右伸缩按钮
+  .button_shrink_top {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_top.png")
+  }
+
+  .button_shrink_bottom {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_bottom.png")
+  }
+
+  .button_shrink_left {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_left.png")
+  }
+
+  .button_shrink_right {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_right.png")
+  }
+
+  //.button_shrink_searchin {width: 35px; height: 35px; background-size:100%;background-image: url("../../../../static/newStyle/searchin.png")}
+  //.button_shrink_searchout {width: 35px; height: 35px; background-size:100%;background-image: url("../../../../static/newStyle/searchout.png")}
+  /*查询输入框*/
+  .input_search {
+    float: left;
+    padding: 8px;
+    width: 270px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_search .datepicker .datepicker-input input {
+    padding-left: 8px;
+    width: 270px !important;
+    height: 42px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_search::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 1.4rem;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_search:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*查询输入域*/
+  .input_textarea {
+    width: 270px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea .datepicker .datepicker-input input {
+    padding-left: 8px;
+    width: 270px !important;
+    height: 120px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.4rem;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_textarea:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+
+  /*下拉框*/
+  .select button {
+    width: 270px !important;
+    height: 35px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    border: solid 1px #c7c7c7 !important;
+    color: #999999;
+    font-size: 1.4rem;
+    font-family: PingFang;
+    font-weight: normal !important;
+  }
+
+  .select button:focus {
+    border: solid 1px #6aa6e2 !important;
+  }
+
+}
+
+/*=========================特殊样式表=========================*/
+
+/*分辨率@1920*1080*/
+@media screen and (max-width: 1920px) {
+
+  html {
+    font-size: 10px;
+  }
+
+  /********************按钮*****************/
+  .select-style {
+    font-size: 1.4rem;
+  }
+
+
+  .btn-group {
+    display: inline-flex !important;
+    height: 35px;
+  }
+
+  .font_normal_body {
+    float: left;
+    margin-top: 10px;
+    font-size: 1.4rem !important;
+    line-height: 30px;
+  }
+
+  .font_bold_body {
+    font-size: 1.4rem !important;
+    line-height: 30px;
+  }
+
+  .font_bold_title {
+    font-size: 1.4rem !important;
+    line-height: 30px;
+  }
+
+  .table_sy thead tr th {
+    font-size: 1.4rem !important;
+  }
+
+  .foot .pager {
+    font-size: 1.4rem !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager a {
+    font-size: 1.4rem !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager li {
+    font-size: 1.4rem !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+
+  /*按钮查询*/
+  .button_search {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search:hover {
+    background-color: #3592ef;
+  }
+
+  /*删除按钮*/
+  .button_delete {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #f1684d;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_delete:hover {
+    background-color: red;
+  }
+
+  /*按钮清空*/
+  .button_clear {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #5ac0d9;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_clear:hover {
+    background-color: #27c4eb;
+  }
+
+  .button_search-1 {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search-1:hover {
+    background-color: #3592ef;
+  }
+
+  .button_new-1 {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new-1:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮新建*/
+  .button_new {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮导出*/
+  .button_export {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_export:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_export button {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_export button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //查询条件伸展
+  .button_stretch {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_stretch button {
+    padding: 8px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch button:hover {
+    background-color: #f0f8ff;
+  }
+
+
+  //左右伸缩按钮
+  .button_shrink_top {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_top.png")
+  }
+
+  .button_shrink_bottom {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_bottom.png")
+  }
+
+  .button_shrink_left {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_left.png")
+  }
+
+  .button_shrink_right {
+    width: 35px;
+    height: 35px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_right.png")
+  }
+
+  //.button_shrink_searchin {width: 35px; height: 35px; background-size:100%;background-image: url("../../../../static/newStyle/searchin.png")}
+  //.button_shrink_searchout {width: 35px; height: 35px; background-size:100%;background-image: url("../../../../static/newStyle/searchout.png")}
+  /*查询输入框*/
+  .input_search {
+    float: left;
+    padding: 8px;
+    width: 270px;
+    height: 35px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_search .datepicker .datepicker-input input {
+    padding-left: 8px;
+    width: 270px !important;
+    height: 42px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_search::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 1.4rem;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_search:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*查询输入域*/
+  .input_textarea {
+    width: 270px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea .datepicker .datepicker-input input {
+    padding-left: 8px;
+    width: 270px !important;
+    height: 120px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.4rem;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_textarea:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+
+  /*下拉框*/
+  .select button {
+    width: 270px !important;
+    height: 35px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    border: solid 1px #c7c7c7 !important;
+    color: #999999;
+    font-size: 1.4rem;
+    font-family: PingFang;
+    font-weight: normal !important;
+  }
+
+  .select button:focus {
+    border: solid 1px #6aa6e2 !important;
+  }
+
+}
+
+/*分辨率@1600*900*/
+@media screen and (max-width: 1600px) {
+
+  html {
+    font-size: 9px;
+  }
+
+  .select-style {
+    font-size: 1.4rem;
+  }
+
+
+  .btn-group {
+    display: inline-flex !important;
+    height: 35px;
+  }
+
+  /********************按钮*****************/
+  /*按钮间隔*/
+  /*.button_spacing{margin: 0px  0px 0px 20px;}*/
+  .font_normal_body {
+    font-size: 15px !important;
+    line-height: 26px;
+  }
+
+  .font_bold_body {
+    font-size: 15px !important;
+    line-height: 26px;
+  }
+
+  .font_bold_title {
+    font-size: 15px !important;
+    line-height: 26px;
+  }
+
+  .table_sy thead tr th {
+    font-size: 15px !important;
+  }
+
+  .foot .pager {
+    font-size: 15px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager a {
+    font-size: 15px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager li {
+    font-size: 15px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  /*按钮查询*/
+  .button_search {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+  .button_search:hover {
+    background-color: #3592ef;
+  }
+
+  /*删除按钮*/
+  .button_delete {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #f1684d;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_delete:hover {
+    background-color: red;
+  }
+
+  /*按钮清空*/
+  .button_clear {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #5ac0d9;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 15px;
+    color: #ffffff;
+  }
+
+  .button_clear:hover {
+    background-color: #27c4eb;
+  }
+
+  .button_search-1 {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search-1:hover {
+    background-color: #3592ef;
+  }
+
+  .button_new-1 {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new-1:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮新建*/
+  .button_new {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 15px;
+    color: #6aa6e2;
+  }
+
+  .button_new:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮导出*/
+  .button_export {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 15px;
+    color: #6aa6e2;
+  }
+
+  .button_export:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_export button {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 15px;
+    color: #6aa6e2;
+  }
+
+  .button_export button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //查询条件伸展
+  .button_stretch {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_stretch button {
+    padding: 6px 10px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //左右伸缩按钮
+  .button_shrink_top {
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_top.png")
+  }
+
+  .button_shrink_bottom {
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_bottom.png")
+  }
+
+  .button_shrink_left {
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_left.png")
+  }
+
+  .button_shrink_right {
+    width: 34px;
+    height: 34px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_right.png")
+  }
+
+
+  /*查询输入框*/
+  .input_search {
+    padding: 7px;
+    width: 200px;
+    height: 34px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333 !important;
+    font-size: 15px !important;
+    font-family: PingFang;
+  }
+
+  .input_search::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 14px;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_search:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*查询输入域*/
+  .input_textarea {
+    width: 200px;
+    height: 110px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea .datepicker .datepicker-input input {
+    padding-left: 7px;
+    width: 200px !important;
+    height: 110px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.4rem;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_textarea:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*下拉框*/
+  .select button {
+    width: 200px !important;
+    height: 34px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    border: solid 1px #c7c7c7 !important;
+    color: #999999 !important;
+    font-size: 15px !important;
+    font-family: PingFang;
+    font-weight: normal !important;
+  }
+
+  .select button:focus {
+    border: solid 1px #6aa6e2 !important;
+  }
+}
+
+/*分辨率@1366*768*/
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 8px;
+  }
+
+  .select-style {
+    font-size: 1.4rem;
+  }
+
+
+  .btn-group {
+    display: inline-flex !important;
+    height: 34px;
+  }
+
+  /********************按钮*****************/
+  /*按钮间隔*/
+  /*.button_spacing{margin: 0px  0px 0px 20px;}*/
+  .font_normal_body {
+    font-size: 13px !important;
+    line-height: 24px;
+  }
+
+  .font_bold_body {
+    font-size: 14px !important;
+    line-height: 24px;
+  }
+
+  .font_bold_title {
+    font-size: 14px !important;
+    line-height: 24px;
+  }
+
+  .table_sy thead tr th {
+    font-size: 14px !important;
+  }
+
+  .foot .pager {
+    font-size: 14px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager a {
+    font-size: 14px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager li {
+    font-size: 14px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  /*按钮查询*/
+  .button_search {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .button_search:hover {
+    background-color: #3592ef;
+  }
+
+  /*删除按钮*/
+  .button_delete {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #f1684d;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_delete:hover {
+    background-color: red;
+  }
+
+  /*按钮清空*/
+  .button_clear {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #5ac0d9;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .button_clear:hover {
+    background-color: #27c4eb;
+  }
+
+  .button_search-1 {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search-1:hover {
+    background-color: #3592ef;
+  }
+
+  .button_new-1 {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new-1:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮新建*/
+  .button_new {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 14px;
+    color: #6aa6e2;
+  }
+
+  .button_new:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮导出*/
+  .button_export {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 14px;
+    color: #6aa6e2;
+  }
+
+  .button_export:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_export button {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #ffffff !important;
+    border-radius: 4px !important;
+    border: solid 1px #6aa6e2 !important;
+    font-family: PingFang;
+    font-size: 14px !important;
+    color: #6aa6e2 !important;
+  }
+
+  .button_export button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //查询条件伸展
+  .button_stretch {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_stretch button {
+    padding: 6px 12px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //左右伸缩按钮
+  .button_shrink_top {
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_top.png")
+  }
+
+  .button_shrink_bottom {
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_bottom.png")
+  }
+
+  .button_shrink_left {
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_left.png")
+  }
+
+  .button_shrink_right {
+    width: 32px;
+    height: 32px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_right.png")
+  }
+
+
+  /*查询输入框*/
+  .input_search {
+    padding: 8px;
+    width: 180px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 14px;
+    font-family: PingFang;
+  }
+
+  .input_search::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 14px;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_search:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*查询输入域*/
+  .input_textarea {
+    width: 180px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea .datepicker .datepicker-input input {
+    padding-left: 8px;
+    width: 180px !important;
+    height: 100px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 1.4rem;
+    font-family: PingFang;
+  }
+
+  .input_textarea::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.4rem;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_textarea:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*下拉框*/
+  .select button {
+    width: 180px !important;
+    height: 32px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    border: solid 1px #c7c7c7 !important;
+    color: #999999 !important;
+    font-size: 14px !important;
+    font-family: PingFang;
+    font-weight: normal !important;
+  }
+
+  .select button:focus {
+    border: solid 1px #6aa6e2 !important;
+  }
+
+}
+
+/*分辨率@1366*768*/
+@media screen and (max-width: 1280px) {
+
+  html {
+    font-size: 7px;
+  }
+
+  .select-style {
+    font-size: 1.4rem;
+  }
+
+
+  .btn-group {
+    display: inline-flex !important;
+    height: 34px;
+  }
+
+  /********************按钮*****************/
+  /*按钮间隔*/
+  /*.button_spacing{margin: 0px  0px 0px 20px;}*/
+  .font_normal_body {
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+
+  .font_bold_body {
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+
+  .font_bold_title {
+    font-size: 12px !important;
+    line-height: 22px;
+  }
+
+  .table_sy thead tr th {
+    font-size: 12px !important;
+  }
+
+  .foot .pager {
+    font-size: 12px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager a {
+    font-size: 12px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager li {
+    font-size: 12px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  /*按钮查询*/
+  .button_search {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  .button_search:hover {
+    background-color: #3592ef;
+  }
+
+  /*删除按钮*/
+  .button_delete {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #f1684d;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_delete:hover {
+    background-color: red;
+  }
+
+  /*按钮清空*/
+  .button_clear {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #5ac0d9;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  .button_clear:hover {
+    background-color: #27c4eb;
+  }
+
+  /*按钮新建*/
+  .button_new {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #6aa6e2;
+  }
+
+  .button_new:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_search-1 {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search-1:hover {
+    background-color: #3592ef;
+  }
+
+  .button_new-1 {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new-1:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮导出*/
+  .button_export {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #6aa6e2;
+  }
+
+  .button_export:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_export button {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff !important;
+    border-radius: 4px !important;
+    border: solid 1px #6aa6e2 !important;
+    font-family: PingFang;
+    font-size: 12px !important;
+    color: #6aa6e2 !important;
+  }
+
+  .button_export button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //查询条件伸展
+  .button_stretch {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_stretch button {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //左右伸缩按钮
+  .button_shrink_top {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #6aa6e2;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_top.png")
+  }
+
+  .button_shrink_bottom {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #6aa6e2;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_bottom.png")
+  }
+
+  .button_shrink_left {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #6aa6e2;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_left.png")
+  }
+
+  .button_shrink_right {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #6aa6e2;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_right.png")
+  }
+
+  /*查询输入框*/
+  .input_search {
+    padding: 6px;
+    width: 180px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 12px;
+    font-family: PingFang;
+  }
+
+  .input_search::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 12px;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_search:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*查询输入域*/
+  .input_textarea {
+    width: 180px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 14px;
+    font-family: PingFang;
+  }
+
+  .input_textarea .datepicker .datepicker-input input {
+    padding-left: 6px;
+    width: 180px !important;
+    height: 100px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 14px;
+    font-family: PingFang;
+  }
+
+  .input_textarea::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_textarea:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*下拉框*/
+  .select button {
+    width: 180px !important;
+    height: 30px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    border: solid 1px #c7c7c7 !important;
+    color: #999999 !important;
+    font-size: 12px !important;
+    font-family: PingFang;
+    font-weight: normal !important;
+  }
+
+  .select button:focus {
+    border: solid 1px #6aa6e2 !important;
+  }
+
+}
+
+/*分辨率@1366*768*/
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 6px;
+  }
+
+  /********************按钮*****************/
+  /*按钮间隔*/
+  /*.button_spacing{margin: 0px  0px 0px 20px;}*/
+  .font_normal_body {
+    font-size: 12px !important;
+    line-height: 20px;
+  }
+
+  .font_bold_body {
+    font-size: 12px !important;
+    line-height: 20px;
+  }
+
+  .font_bold_title {
+    font-size: 12px !important;
+    line-height: 20px;
+  }
+
+  .table_sy thead tr th {
+    font-size: 12px !important;
+  }
+
+  .foot .pager {
+    font-size: 12px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager a {
+    font-size: 12px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  .foot .pager li {
+    font-size: 12px !important;
+    color: #666666 !important;
+    font-weight: normal !important;
+  }
+
+  /*按钮查询*/
+  .button_search {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .button_search:hover {
+    background-color: #3592ef;
+  }
+
+  /*删除按钮*/
+  .button_delete {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #f1684d;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_delete:hover {
+    background-color: red;
+  }
+
+  /*按钮清空*/
+  .button_clear {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #5ac0d9;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #ffffff;
+  }
+
+  .button_clear:hover {
+    background-color: #27c4eb;
+  }
+
+  /*按钮新建*/
+  .button_new {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #6aa6e2;
+  }
+
+  .button_new:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_search-1 {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #6aa6e2;
+    border-radius: 4px;
+    border: none;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .button_search-1:hover {
+    background-color: #3592ef;
+  }
+
+  .button_new-1 {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_new-1:hover {
+    background-color: #f0f8ff;
+  }
+
+  /*按钮导出*/
+  .button_export {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 12px;
+    color: #6aa6e2;
+  }
+
+  .button_export:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_export button {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff !important;
+    border-radius: 4px !important;
+    border: solid 1px #6aa6e2 !important;
+    font-family: PingFang;
+    font-size: 12px !important;
+    color: #6aa6e2 !important;
+  }
+
+  .button_export button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //查询条件伸展
+  .button_stretch {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch:hover {
+    background-color: #f0f8ff;
+  }
+
+  .button_stretch button {
+    padding: 6px 8px;
+    width: max-content;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: solid 1px #6aa6e2;
+    font-family: PingFang;
+    font-size: 1.4rem;
+    color: #6aa6e2;
+  }
+
+  .button_stretch button:hover {
+    background-color: #f0f8ff;
+  }
+
+  //左右伸缩按钮
+  .button_shrink_top {
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_top.png")
+  }
+
+  .button_shrink_bottom {
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_bottom.png")
+  }
+
+  .button_shrink_left {
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_left.png")
+  }
+
+  .button_shrink_right {
+    width: 28px;
+    height: 28px;
+    background-size: 100%;
+    background-image: url("../../../../static/newStyle/stretch_right.png")
+  }
+
+  /*查询输入框*/
+  .input_search {
+    padding: 6px;
+    width: 160px;
+    height: 28px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 12px;
+    font-family: PingFang;
+  }
+
+  .input_search::-webkit-input-placeholder {
+    color: #999999;
+    font-size: 12px;
+    padding-left: 6px;
+    font-family: PingFang;
+  }
+
+  .input_search:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*查询输入域*/
+  .input_textarea {
+    width: 160px;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7;
+    color: #333333;
+    font-size: 12px;
+    font-family: PingFang;
+  }
+
+  .input_textarea .datepicker .datepicker-input input {
+    padding-left: 6px;
+    width: 160px !important;
+    height: 90px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+    border: solid 1px #c7c7c7 !important;
+    color: #333333;
+    font-size: 14px;
+    font-family: PingFang;
+  }
+
+  .input_textarea::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 4px;
+    font-family: PingFang;
+  }
+
+  .input_textarea:focus {
+    border: solid 1px #6aa6e2;
+  }
+
+  /*下拉框*/
+  .select button {
+    width: 160px !important;
+    height: 28px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    border: solid 1px #c7c7c7 !important;
+    color: #999999 !important;
+    font-size: 12px !important;
+    font-family: PingFang;
+    font-weight: normal !important;
+  }
+
+  .select button:focus {
+    border: solid 1px #6aa6e2 !important;
+  }
+
+}
